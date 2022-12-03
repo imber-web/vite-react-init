@@ -1,4 +1,3 @@
-import { Form } from 'react-router-dom'
 interface Icontact {
   first: string
   last: string
@@ -31,15 +30,5 @@ export default function Contact() {
 }
 function Favorite({ contact }: { contact: Icontact }) {
   const favorite = contact.favorite
-  return (
-    <Form method="post">
-      <button
-        name="favorite"
-        value={favorite ? 'false' : 'true'}
-        aria-label={favorite ? 'Remove from favorites' : 'Add to favorites'}
-      >
-        {favorite ? '★' : '☆'}
-      </button>
-    </Form>
-  )
+  return <div>{favorite}</div>
 }

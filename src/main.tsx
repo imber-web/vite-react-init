@@ -1,12 +1,13 @@
+import React from 'react'
 import './index.css'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, redirect, RouterProvider } from 'react-router-dom'
-import ErrorPage from './error-page'
-import Contact from './routes/contact'
 import Root from './root'
 import { getAccess } from './services/access'
-import Login from './routes/login'
-import About from './routes/about'
+const Login = React.lazy(() => import('./routes/login'))
+const About = React.lazy(() => import('./routes/about'))
+const ErrorPage = React.lazy(() => import('./error-page'))
+const Contact = React.lazy(() => import('./routes/contact'))
 async function loader() {
   const access = (await getAccess()) as string[]
   if (!access.includes('p6')) {

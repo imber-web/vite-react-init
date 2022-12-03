@@ -9,13 +9,13 @@ export default function Root() {
         <h1>Contacts</h1>
         <ul>
           <li>
-            <Link to={`contacts/1`}>Your Name</Link>
+            <Link to={`contacts/1`}>Your contact1</Link>
           </li>
           <li>
-            <Link to={`contacts/2`}>Your Friend</Link>
+            <Link to={`contacts/2`}>Your contact2</Link>
           </li>
           <li>
-            <Link to={`about`}>Your Friend</Link>
+            <Link to={`about`}>Your About</Link>
           </li>
         </ul>
       </div>
