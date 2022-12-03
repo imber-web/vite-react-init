@@ -69,3 +69,15 @@ button:active {
 img {
   border-radius: 8px;
 }
+
+.screen {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.layout {
+  display: flex;
+}

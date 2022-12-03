@@ -1,4 +1,4 @@
 const Login: React.FC = () => {
-  return <div>login</div>
+  return <h1>login</h1>
 }
 export default Login
