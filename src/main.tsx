@@ -6,6 +6,7 @@ import Contact from './routes/contact'
 import Root from './root'
 import { getAccess } from './services/access'
 import Login from './routes/login'
+import About from './routes/about'
 async function loader() {
   const access = (await getAccess()) as string[]
   if (!access.includes('p6')) {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: 'login',
     element: <Login />
+  },
+  {
+    path: 'about',
+    element: <About />
   }
 ])
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
