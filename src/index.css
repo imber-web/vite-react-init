@@ -1,59 +1,15 @@
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --theme-color: #fff;
+  --theme-background: #000;
 }
 
 html,
 body {
-  height: 100%;
-  margin: 0;
-  line-height: 1.5;
-  color: #121212;
+  color: var(--theme-color);
+  background-color: var(--theme-background);
 }
 
-textarea,
-input,
-button {
-  font-size: 1rem;
-  font-family: inherit;
-  border: none;
-  border-radius: 8px;
-  padding: 0.5rem 0.75rem;
-  box-shadow: 0 0 1px hsl(0deg 0% 0% / 20%), 0 1px 2px hsl(0deg 0% 0% / 20%);
-  background-color: white;
-  line-height: 1.5;
-  margin: 0;
-}
-
-button {
-  color: #3992ff;
-  font-weight: 500;
-}
-
-textarea:hover,
-input:hover,
-button:hover {
-  box-shadow: 0 0 1px hsl(0deg 0% 0% / 60%), 0 1px 2px hsl(0deg 0% 0% / 20%);
-}
-
-button:active {
-  box-shadow: 0 0 1px hsl(0deg 0% 0% / 40%);
-  transform: translateY(1px);
-}
-
-#error-page {
+s #error-page {
   display: flex;
   flex-direction: column;
   align-items: center;

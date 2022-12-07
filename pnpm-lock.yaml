@@ -15,6 +15,7 @@ specifiers:
   eslint-plugin-react: ^7.31.11
   husky: ^8.0.0
   lint-staged: ^13.0.4
+  normalize.css: ^8.0.1
   prettier: ^2.8.0
   react: ^18.2.0
   react-dom: ^18.2.0
@@ -33,6 +34,7 @@ dependencies:
   eslint-config-prettier: registry.npmmirror.com/eslint-config-prettier/8.5.0_eslint@8.28.0
   eslint-plugin-prettier: registry.npmmirror.com/eslint-plugin-prettier/4.2.1_cwlo2dingkvfydnaculr42urve
   lint-staged: registry.npmmirror.com/lint-staged/13.0.4
+  normalize.css: registry.npmmirror.com/normalize.css/8.0.1
   prettier: registry.npmmirror.com/prettier/2.8.0
   react: registry.npmmirror.com/react/18.2.0
   react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
@@ -3605,6 +3607,12 @@ packages:
     name: normalize-path
     version: 3.0.0
     engines: {node: '>=0.10.0'}
+    dev: false
+
+  registry.npmmirror.com/normalize.css/8.0.1:
+    resolution: {integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/normalize.css/-/normalize.css-8.0.1.tgz}
+    name: normalize.css
+    version: 8.0.1
     dev: false
 
   registry.npmmirror.com/npm-run-path/4.0.1:

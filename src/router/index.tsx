@@ -2,6 +2,8 @@ import { createBrowserRouter, redirect } from 'react-router-dom'
 import { getAccess } from '../services/access'
 import { Spin } from 'antd'
 import React, { Suspense } from 'react'
+import Tsdemo from '@/pages/ts-demo'
+import ReactDemo from '@/pages/react-demo'
 const ErrorPage = React.lazy(() => import('@/error-page'))
 const Login = React.lazy(() => import('@/login'))
 const Layout = React.lazy(() => import('@/layout'))
@@ -33,6 +35,14 @@ const router = createBrowserRouter([
       {
         path: 'rank',
         element: <Rank />
+      },
+      {
+        path: 'react-demo',
+        element: <ReactDemo />
+      },
+      {
+        path: 'ts-demo',
+        element: <Tsdemo />
       }
     ]
   },

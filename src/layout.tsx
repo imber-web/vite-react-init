@@ -1,6 +1,7 @@
 import { Link, Outlet } from 'react-router-dom'
 import { Spin } from 'antd'
 import { Suspense } from 'react'
+import { toggleTheme } from './utils'
 
 export default function Layout() {
   return (
@@ -18,6 +19,14 @@ export default function Layout() {
               state参数
             </Link>
           </li>
+          <li>
+            <Link to={`react-demo`}>react-demo</Link>
+          </li>
+          <li>
+            <Link to={`ts-demo`}>ts-demo</Link>
+          </li>
+          <li onClick={toggleTheme}>一键换肤</li>
+          <li>响应式</li>
         </ul>
       </div>
       <div id="detail">
