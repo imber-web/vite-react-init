@@ -1,15 +1,4 @@
-:root {
-  --theme-color: #fff;
-  --theme-background: #000;
-}
-
-html,
-body {
-  color: var(--theme-color);
-  background-color: var(--theme-background);
-}
-
-s #error-page {
+#error-page {
   display: flex;
   flex-direction: column;
   align-items: center;

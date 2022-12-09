@@ -26,7 +26,8 @@ export default function Layout() {
             <Link to={`ts-demo`}>ts-demo</Link>
           </li>
           <li onClick={toggleTheme}>一键换肤</li>
-          <li>响应式</li>
+          <li>响应式 commitizen</li>
+          <li>tailwind</li>
         </ul>
       </div>
       <div id="detail">
