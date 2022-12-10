@@ -10,12 +10,14 @@
     "fix:prettier": "prettier --write ./**/*.{html,ts,css,tsx,json}",
     "fix:eslint": "eslint . --ext .js,.ts,.tsx --fix",
     "fix:stylelint": "stylelint **/*.css --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "cz"
   },
   "dependencies": {
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
     "antd": "^5.0.3",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "lint-staged": "^13.0.4",
@@ -34,10 +36,16 @@
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
     "@vitejs/plugin-react": "^2.2.0",
+    "commitizen": "^4.2.6",
     "eslint": "^8.28.0",
     "eslint-plugin-react": "^7.31.11",
     "husky": "^8.0.0",
     "typescript": "^4.6.4",
     "vite": "^3.2.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
