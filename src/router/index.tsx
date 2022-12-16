@@ -10,6 +10,7 @@ const Layout = React.lazy(() => import('@/layout'))
 const Home = React.lazy(() => import('@/pages/home'))
 const About = React.lazy(() => import('@/pages/about'))
 const Rank = React.lazy(() => import('@/pages/rank'))
+const Work = React.lazy(() => import('@/pages/work'))
 async function loader() {
   const access = (await getAccess()) as string[]
   if (!access.includes('p')) {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
         <Login />
       </Suspense>
     )
+  },
+  {
+    path: 'work',
+    element: <Work />
   }
 ])
 export default router
