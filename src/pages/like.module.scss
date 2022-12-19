@@ -1,0 +1,141 @@
+// html,
+// body {
+//   color: var(--theme-color);
+//   background-color: #fafafa;
+// }
+.tl_40 {
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.button {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  position: relative;
+  // transition: transform ease-in 0.1s, background-color ease-in 0.1s,
+  //   box-shadow ease-in 0.25s;
+}
+
+.button::before {
+  position: absolute;
+  content: '';
+  left: -1em;
+  right: -1em;
+  top: -1em;
+  bottom: -1em;
+  // pointer-events: none;
+  // transition: ease-in-out 0.5s;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(ellipse, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    /*  */ radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%),
+    radial-gradient(circle, #ff0081 20%, transparent 20%);
+  // background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+  //   10% 10%, 18% 18%, 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%,
+  //   20% 20%;
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%, 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%,
+    20% 20%;
+  // background-position: 18% 18%, 18% 18%, 18% 18%, 18% 18%, 18% 18%, 18% 18%,
+  //   65% 30%, 80% 32%, 15% 60%, 83% 60%, 18% 70%, 25% 70%, 41% 70%, 50% 70%,
+  //   64% 70%, 80% 71%;
+  animation: bubbles ease-in-out 0.75s forwards;
+}
+
+.button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 25px rgb(233 30 99 / 50%);
+}
+
+.button:active::before {
+  animation: none;
+  background-size: 0;
+}
+
+@keyframes bubbles {
+  0% {
+    background-position: 18% 40%, 20% 31%, 30% 30%, 40% 30%, 50% 30%, 57% 30%,
+      65% 30%, 80% 32%, 15% 60%, 83% 60%, 18% 70%, 25% 70%, 41% 70%, 50% 70%,
+      64% 70%, 80% 71%;
+  }
+
+  50% {
+    background-position: 10% 44%, 0% 20%, 15% 5%, 30% 0%, 42% 0%, 62% -2%,
+      75% 0%, 95% -2%, 0% 80%, 95% 55%, 7% 100%, 24% 100%, 41% 100%, 55% 95%,
+      68% 96%, 95% 100%;
+  }
+
+  100% {
+    background-position: 5% 44%, -5% 20%, 7% 5%, 23% 0%, 37% 0, 58% -2%, 80% 0%,
+      100% -2%, -5% 80%, 100% 55%, 2% 100%, 23% 100%, 42% 100%, 60% 95%, 70% 96%,
+      100% 100%;
+    background-size: 0% 0%;
+  }
+}
+
+// ======================== 2 ========================
+$expression: '😀', '🤣', '❤️', '😻', '👏', '🤘', '🤡', '🤩', '👍🏼', '🐮', '🎈',
+  '💕', '💓', '💚';
+.g_wrap {
+  margin-top: 40px;
+  margin-left: 180px;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  &:active::before {
+    transform: scale(1.1);
+  }
+}
+
+@for $i from 1 to 51 {
+  .g_wrap li:nth-child(#{$i}) {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transform: rotate(#{random() * 80 - 40}deg);
+    animation: move
+      #{random() *
+      2500 +
+      1500}ms
+      infinite
+      #{random() *
+      4000 /
+      -1000}s
+      cubic-bezier(0.46, 0.53, 0.51, 0.62);
+    opacity: 1;
+    transition: 1.5s opacity 0.8s;
+    &::before {
+      content: nth($expression, random(length($expression)));
+      position: absolute;
+    }
+  }
+}
+@keyframes move {
+  // 0% {
+  //   opacity: 0.5;
+  // }
+  // 50% {
+  //   transform: translate(0, -120px);
+  //   opacity: 1;
+  // }
+  100% {
+    transform: rotate(0) translate(0, -250px);
+    opacity: 0;
+  }
+}
+.go-live {
+  margin-bottom: 400px;
+}

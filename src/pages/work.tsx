@@ -1,11 +1,19 @@
+import { Input } from 'antd'
+
 const Work: React.FC = () => {
   return (
     <>
-      <div>
+      <div className="bg-purple">
         {/* 头部导航 */}
-        <div>
-          <div>MEIZU</div>
-          <div>搜索框</div>
+        <div className="flex items-center justify-between h-28 pl-20 pr-20">
+          <h1 className="text-2xl">MEIZU</h1>
+          <ul className="flex">
+            <li>MEIZU</li>
+            <li>MEIZU</li>
+            <li>MEIZU</li>
+            <li>MEIZU</li>
+          </ul>
+          <Input type="search"></Input>
           <div>头像</div>
         </div>
         {/* title-追求源于热爱 */}
@@ -18,7 +26,7 @@ const Work: React.FC = () => {
           <div></div>
         </div>
         {/* ==================== tailwind ==================== */}
-        <div className="flex items-center bg-white rounded-xl shadow-md p-6 space-x-4 max-w-sm mx-auto">
+        <div className="flex items-center bg-blue rounded-xl shadow-md p-6 space-x-4 max-w-sm mx-auto">
           <div className="flex-shrink-0">
             <img className="w-12 h-12" src="../assets/react.svg" alt="" />
           </div>
@@ -28,7 +36,7 @@ const Work: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-md mx-auto bg-yellow-50 rounded-xl shadow-md md:max-w-2xl">
+      <div className="max-w-md mx-auto bg-purple-light rounded-xl shadow-md md:max-w-2xl">
         <div className="md:flex">
           <div className="md:flex-shrink-0">
             <img

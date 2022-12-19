@@ -4,6 +4,7 @@ import { Spin } from 'antd'
 import React, { Suspense } from 'react'
 import Tsdemo from '@/pages/ts-demo'
 import ReactDemo from '@/pages/react-demo'
+import Like from '@/pages/like'
 const ErrorPage = React.lazy(() => import('@/error-page'))
 const Login = React.lazy(() => import('@/login'))
 const Layout = React.lazy(() => import('@/layout'))
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
   {
     path: 'work',
     element: <Work />
+  },
+  {
+    path: 'like',
+    element: <Like />
   }
 ])
 export default router
