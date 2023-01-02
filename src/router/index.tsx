@@ -5,9 +5,9 @@ import React, { Suspense } from 'react'
 import Tsdemo from '@/pages/ts-demo'
 import ReactDemo from '@/pages/react-demo'
 import Like from '@/pages/like'
-const ErrorPage = React.lazy(() => import('@/error-page'))
-const Login = React.lazy(() => import('@/login'))
-const Layout = React.lazy(() => import('@/layout'))
+const ErrorPage = React.lazy(() => import('@/pages/error-page'))
+const Login = React.lazy(() => import('@/pages/login'))
+const Layout = React.lazy(() => import('@/pages/layout'))
 const Home = React.lazy(() => import('@/pages/home'))
 const About = React.lazy(() => import('@/pages/about'))
 const Rank = React.lazy(() => import('@/pages/rank'))

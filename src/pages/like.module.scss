@@ -112,8 +112,7 @@ $expression: '😀', '🤣', '❤️', '😻', '👏', '🤘', '🤡', '🤩', '
       1500}ms
       infinite
       #{random() *
-      4000 /
-      -1000}s
+      4000-1000}s
       cubic-bezier(0.46, 0.53, 0.51, 0.62);
     opacity: 1;
     transition: 1.5s opacity 0.8s;
